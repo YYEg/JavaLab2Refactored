@@ -14,6 +14,7 @@ public class Main {
             int choice = in.nextInt();
 
             if (choice == 1) {
+                System.out.println("What is the Fibonacci number you want:");
                 int numberIn = in.nextInt();
                 FibNum countFib = new FibNum(1, 1);
                 String[] text = new String[50];
@@ -27,10 +28,14 @@ public class Main {
             } else if (choice == 3) {
                 Array avarageValue = new Array();
                 avarageValue.getAvarageValue();
-            } else if (choice == 4) {
-                Words converter = new Words();
-                converter.ConvertFromNumToWords();
-            }*/else {
+            }*/else if (choice == 4) {
+                System.out.println("What is the Fibonacci number you want:");
+                int numberIn = in.nextInt();
+                String text;
+                Words converter = new Words("");
+                text = converter.Convert(numberIn);
+                System.out.println(text);
+            }else {
                 break;
             }
         }

@@ -2,7 +2,7 @@ public class FibNum {
     int current;
     int byCount;
 
-    FibNum(int current, int byCount)
+    public FibNum(int current, int byCount)
     {
         this.current = current;
         this.byCount = byCount;
