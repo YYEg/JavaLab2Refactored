@@ -19,7 +19,7 @@ public class Array {
     }
 
     public static int getAvarage(Array workArray) {
-        workArray = FillRandom(workArray);
+        Array.FillRandom(workArray);
         int arrSum = 0, count = 0;
         for (int i = 0; i < workArray.rangeOfArray; i++) {
             arrSum += workArray.numbersArr[i];
@@ -29,7 +29,7 @@ public class Array {
     }
 
     public static String[] PrintArray(Array workArray, int limit) {
-        workArray = FillRandom(workArray);
+        Array.FillRandom(workArray);
         String[] arr = new String[limit];
         for (int i = 0; i < limit; i++) {
             if (workArray.numbersArr[i] % 2 == 0)

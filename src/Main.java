@@ -14,7 +14,7 @@ public class Main {
             int choice = in.nextInt();
 
             if (choice == 1) {
-                System.out.println("What is the Fibonacci number you want:");
+                System.out.println("ведите желаемый номер чесла Фибоначчи:");
                 int numberIn = in.nextInt();
                 FibNum countFib = new FibNum(1, 1);
                 String[] text = new String[50];
@@ -23,9 +23,9 @@ public class Main {
                     System.out.println(text[i]);
                 }
             } else if (choice == 2) {
-                System.out.println("Array Dimension:");
+                System.out.println("Введите размерность необходимого массива:");
                 int numberIn = in.nextInt();
-                System.out.println("How many numbers do you want to output:");
+                System.out.println("Сколько чисел вы хотите вывести?");
                 int limit = in.nextInt();
                 Array startArray = new Array(numberIn);
                 String[] arr = Array.PrintArray(startArray, limit);
@@ -33,14 +33,14 @@ public class Main {
                     System.out.println(arr[i]);
                 }
             } else if (choice == 3) {
-                System.out.println("Array Dimension:");
+                System.out.println("Введите размерность необходимого массива:");
                 int numberIn = in.nextInt();
                 Array avarageValue = new Array(numberIn);
                 int result;
                 result = Array.getAvarage(avarageValue);
                 System.out.println(result);
             }else if (choice == 4) {
-                System.out.println("Array Dimension");
+                System.out.println("Введите число, которое хотите вывести в текстовом формате(<1000):4");
                 int numberIn = in.nextInt();
                 String text;
                 Words converter = new Words("");
