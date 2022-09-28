@@ -22,14 +22,25 @@ public class Main {
                     text = countFib.getCurrent(numberIn);
                     System.out.println(text[i]);
                 }
-            } /*else if (choice == 2) {
-                Array limitedArray = new Array();
-                limitedArray.printLimitedArray();
+            } else if (choice == 2) {
+                System.out.println("Array Dimension:");
+                int numberIn = in.nextInt();
+                System.out.println("How many numbers do you want to output:");
+                int limit = in.nextInt();
+                Array startArray = new Array(numberIn);
+                String[] arr = Array.PrintArray(startArray, limit);
+                for(int i = 0; i < limit; i++){
+                    System.out.println(arr[i]);
+                }
             } else if (choice == 3) {
-                Array avarageValue = new Array();
-                avarageValue.getAvarageValue();
-            }*/else if (choice == 4) {
-                System.out.println("What is the Fibonacci number you want:");
+                System.out.println("Array Dimension:");
+                int numberIn = in.nextInt();
+                Array avarageValue = new Array(numberIn);
+                int result;
+                result = Array.getAvarage(avarageValue);
+                System.out.println(result);
+            }else if (choice == 4) {
+                System.out.println("Array Dimension");
                 int numberIn = in.nextInt();
                 String text;
                 Words converter = new Words("");
