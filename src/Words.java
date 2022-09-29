@@ -12,32 +12,31 @@ public class Words {
         final String[] tens = {" ", "десять", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"};
         final String[] hundreds = {"тысяча", "сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот"};
 
-        String textOut = "";
+        Words textOut = new Words("");
         if (inputNumber < 20) {
-            textOut = belowTwenty[inputNumber];
+            textOut.textNumber = belowTwenty[inputNumber];
         } else if (inputNumber < 100) {
             int mid = inputNumber / 10;
             int low = inputNumber % 10;
-            textOut = tens[mid];
+            textOut.textNumber = tens[mid];
             if (low != 0)
-                textOut = textOut + " " + belowTwenty[low];
-            textOut = textOut;
+                textOut.textNumber = textOut.textNumber + " " + belowTwenty[low];
         } else if (inputNumber < 1000) {
             int high = inputNumber / 100;
             int midLow = inputNumber % 100;
             int mid = inputNumber / 10 % 10;
             int low = inputNumber % 10;
-            textOut = hundreds[high];
+            textOut.textNumber = hundreds[high];
             if (midLow <= 19) {
-                textOut = textOut + " " + belowTwenty[midLow];
+                textOut.textNumber = textOut.textNumber + " " + belowTwenty[midLow];
             }
             else{
                 if (mid != 0)
-                    textOut = textOut + " " + tens[mid];
+                    textOut.textNumber = textOut.textNumber + " " + tens[mid];
                 if (low != 0)
-                    textOut = textOut + " " + belowTwenty[low];
+                    textOut.textNumber = textOut.textNumber + " " + belowTwenty[low];
             }
         }
-        return textOut;
+        return textOut.textNumber;
     }
 }
