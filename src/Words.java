@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Words {
     private String textNumber;
 
-    public Words(String textNumber) {
-        this.textNumber = textNumber;
+    public Words(){
+        this.textNumber = "sample";
     }
 
     public String Convert(int inputNumber) {
@@ -12,7 +12,7 @@ public class Words {
         final String[] tens = {" ", "десять", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"};
         final String[] hundreds = {"тысяча", "сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот"};
 
-        Words textOut = new Words("");
+        Words textOut = new Words();
         if (inputNumber < 20) {
             textOut.textNumber = belowTwenty[inputNumber];
         } else if (inputNumber < 100) {

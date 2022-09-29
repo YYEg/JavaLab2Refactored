@@ -16,10 +16,12 @@ public class Main {
             if (choice == 1) {
                 System.out.println("ведите желаемый номер чесла Фибоначчи:");
                 int numberIn = in.nextInt();
-                FibNum countFib = new FibNum(1, 1);
-                String[] text = new String[50];
+                FibNum countFib = new FibNum();
+                String[] text;
+                FibNum cloneFibnum = new FibNum(countFib);
+                countFib.current = 1000;
                 for (int i = 0; i < numberIn; i++) {
-                    text = countFib.getCurrent(numberIn);
+                    text = FibNum.reciveCurrent(cloneFibnum, numberIn);
                     System.out.println(text[i]);
                 }
             } else if (choice == 2) {
@@ -37,13 +39,13 @@ public class Main {
                 int numberIn = in.nextInt();
                 Array avarageValue = new Array(numberIn);
                 int result;
-                result = Array.getAvarage(avarageValue);
-                System.out.println(result);
+                result = Array.reciveAvarage(avarageValue);
+                System.out.println("Среднее значение чисел массива: " + result);
             }else if (choice == 4) {
-                System.out.println("Введите число, которое хотите вывести в текстовом формате(<1000):4");
+                System.out.println("Введите число, которое хотите вывести в текстовом формате(<1000):");
                 int numberIn = in.nextInt();
                 String text;
-                Words converter = new Words("");
+                Words converter = new Words();
                 text = converter.Convert(numberIn);
                 System.out.println(text);
             }else {
